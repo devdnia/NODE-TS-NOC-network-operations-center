@@ -1,3 +1,4 @@
+import { FetchService } from "../fetch/fetch-service";
 
 interface CheckServiceUseCase {
     execute( url: string ):Promise<boolean>;
@@ -20,7 +21,7 @@ export class CheckService implements CheckServiceUseCase {
     public async execute( url: string ):Promise<boolean> {
 
         try {
-            const req = await fetch( url );
+            const req = await FetchService.fetchApi( url );
             if( !req.ok ){
                 throw new Error(`Error on check service ${ url }`);
             }
