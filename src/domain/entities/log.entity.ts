@@ -1,5 +1,5 @@
 
-export enum LogSeveryLevel {
+export enum LogSeverityLevel {
     low = 'low',
     medium = 'medium',
     high = 'high'
@@ -9,11 +9,11 @@ export enum LogSeveryLevel {
 
 export class LogEntity {
 
-    public level: LogSeveryLevel
+    public level: LogSeverityLevel
     public message: string;
     public createdAt: Date;
 
-    constructor( message: string, level: LogSeveryLevel ){
+    constructor( message: string, level: LogSeverityLevel ){
 
         this.message = message;
         this.level = level;
