@@ -6,8 +6,8 @@ interface CheckServiceUseCase {
     execute( url: string ):Promise<boolean>;
 }
 
-type SuccesCallback = () => void;
-type ErrorCallback = ( error:string ) => void;
+type SuccesCallback = (() => void) | undefined;
+type ErrorCallback = (( error:string ) => void) | undefined;
 
 
 
