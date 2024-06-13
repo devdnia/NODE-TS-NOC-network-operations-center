@@ -1,6 +1,6 @@
 import { LogEntity, LogSeverityLevel } from "../../entities/log.entity";
 import { LogRepository } from "../../repository/log-repository";
-import { FetchService } from "../fetch/fetch-service";
+import { FetchService } from "../../../config/plugins/fetch.plugins";
 
 interface CheckServiceUseCase {
     execute( url: string ):Promise<boolean>;
